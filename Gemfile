@@ -23,6 +23,10 @@ group :development, :test do
   gem 'pry'
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
+  gem 'launchy'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'database_cleaner'
+  gem 'capybara'
 end
 
 group :development do
