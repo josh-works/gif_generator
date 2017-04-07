@@ -18,4 +18,6 @@ That said, I am jotting down notes as I go, and don't really know where I'm goin
 
 ## Setup
 
-[this repo](with this branch name) is where I'm starting.
+[I'm using this repo](), and all this work will happen on the `consume_gify_api` branch. If you were to check that out and go to the first commit, you should find this article done to right here.
+
+<=
