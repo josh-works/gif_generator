@@ -33,7 +33,3 @@ Pulling from [their search endpoint docs](https://github.com/giphy/GiphyAPI#sear
 and get a response. Over to terminal!
 
 (damn, on a train right now, cannot figure this out without wifi)
-
-
-
-Stephanie:

@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170406163316) do
+ActiveRecord::Schema.define(version: 20170409162443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+  end
+
+  create_table "favorite_gifs", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "gif_id"
+    t.index ["gif_id"], name: "index_favorite_gifs_on_gif_id", using: :btree
+    t.index ["user_id"], name: "index_favorite_gifs_on_user_id", using: :btree
   end
 
   create_table "gif_categories", force: :cascade do |t|
@@ -30,4 +37,15 @@ ActiveRecord::Schema.define(version: 20170406163316) do
     t.string "image_path"
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "email"
+    t.string  "password_digest"
+    t.string  "password_confirmation"
+    t.integer "user_role"
+  end
+
+  add_foreign_key "favorite_gifs", "gifs"
+  add_foreign_key "favorite_gifs", "users"
 end
