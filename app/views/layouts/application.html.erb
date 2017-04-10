@@ -9,6 +9,22 @@
   </head>
 
   <body>
+
+    <!-- create "if" block for "if user logged in, yield this"
+    else, "yield this other thing", place all in shared folder -->
+    <nav class="auth">
+      <% if current_user.id %>
+        <%= render partial: "shared/logged_in_nav" %>
+      <% else %>
+        <%= render partial: "shared/not_logged_in_nav" %>
+      <% end %>
+    </nav>
+
+    <% flash.each do |type, message| %>
+      <%= content_tag :div, message, class: "flash_#{type}" %>
+    <% end %>
+
+
     <%= yield %>
   </body>
 </html>

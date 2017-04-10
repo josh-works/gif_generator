@@ -37,4 +37,4 @@ paul = User.find_or_create_by(first_name: "Paul", last_name: "Paulson",
 paul.favorite_gifs.find_or_create_by(gif: truck.gifs.last)
 paul.favorite_gifs.find_or_create_by(gif: bunny.gifs.last)
 
-p "Sample of what was created: #{Category.first}, #{Gif.first}, #{User.first}"
+p "Sample of what was created: #{Category.first.name}, #{Gif.first.image_path}, #{User.first.first_name}"
